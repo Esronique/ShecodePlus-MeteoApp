@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <form action="">
+      <form class="search-form" id="search-form">
         <input
           type="search"
           placeholder="Enter a city..."
@@ -35,11 +35,15 @@
       </button>
     </header>
     <main>
-      <video autoplay muted loop>
-        <source src="videos/clouds.mp4" type="video/mp4" />
-      </video>
+      <video
+        autoplay
+        muted
+        loop
+        src="videos/clouds.mp4"
+        type="video/mp4"
+      ></video>
       <div class="currentCity">
-        <h1>Paris</h1>
+        <h1 id="city">Paris</h1>
         <span class="currentIcon">🌤️ </span>
         <span class="currentTemp">12°C</span>
       </div>
@@ -76,5 +80,6 @@
         <a href="https://plusmeteoapp.netlify.app/" target="_blank">Netlify</a>
       </p>
     </footer>
+    <script src="src/scripts.js"></script>
   </body>
 </html>

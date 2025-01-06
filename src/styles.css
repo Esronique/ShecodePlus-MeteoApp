@@ -9,6 +9,14 @@ header {
   padding-bottom: 8px;
 }
 
+.dark header {
+  border-bottom: 3px solid whitesmoke;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
 form {
   width: 40%;
   display: flex;
@@ -20,6 +28,13 @@ footer {
   border-top: 3px solid black;
   text-align: center;
   color: black;
+  width: 100%;
+}
+
+.dark footer {
+  border-top: 3px solid whitesmoke;
+  text-align: center;
+  color: whitesmoke;
   width: 100%;
 }
 
@@ -37,34 +52,13 @@ main {
   border-radius: 6px;
 }
 
-#search-form-input {
-  background-color: #f0eef3;
-  width: 90%;
-  font-size: 16px;
-  padding: 15px 20px;
-  margin: 0px;
-  border: 3px solid black;
+.dark main {
+  display: flex;
+  align-content: start;
+  margin: 50px 50px;
+  background-color: #f0eef354;
   border-radius: 6px;
-}
-
-#search-form-button {
-  background: #f0eef3;
-  border: none;
-  font-size: 20px;
-  color: black;
-  position: absolute;
-  right: 80px;
-  top: 12px;
-  height: 40px;
-}
-
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -100;
+  color: whitesmoke;
 }
 
 button {
@@ -78,6 +72,36 @@ button {
   padding: 5px;
   border: 3px solid black;
   border-radius: 6px;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  background-color: #f0eef3;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  z-index: -100;
+}
+
+.dark button {
+  background: #f0eef354;
+  font-size: 20px;
+  color: whitesmoke;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  height: 50px;
+  padding: 5px;
+  border: 3px solid whitesmoke;
+  border-radius: 6px;
+  transition: all 200ms ease;
 }
 
 .currentCity {
@@ -103,4 +127,47 @@ button {
 
 .tempDetails {
   font-size: 40px;
+}
+
+#search-form-input {
+  background-color: #f0eef3;
+  width: 90%;
+  font-size: 16px;
+  padding: 15px 20px;
+  margin: 0px;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.dark #search-form-input {
+  background-color: #f0eef354;
+  width: 90%;
+  font-size: 16px;
+  padding: 15px 20px;
+  margin: 0px;
+  border: 3px solid whitesmoke;
+  border-radius: 6px;
+  color: whitesmoke;
+}
+
+#search-form-button {
+  background-color: #f0eef300;
+  border: none;
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  right: 80px;
+  top: 12px;
+  height: 40px;
+}
+
+.dark #search-form-button {
+  background-color: #f0eef300;
+  border: none;
+  font-size: 20px;
+  color: whitesmoke;
+  position: absolute;
+  right: 80px;
+  top: 12px;
+  height: 40px;
 }
