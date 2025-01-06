@@ -2,26 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Meteo</title>
   </head>
   <body>
     <header>
       <form action="">
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          required
+          id="search-form-input"
+        />
+        <input
+          type="submit"
+          value="Search"
+          id="search-form-button"
+          class="material-symbols-outlined"
+        />
       </form>
+      <button class="material-symbols-outlined" id="themeButton">
+        Radio_Button_Partial
+      </button>
     </header>
     <main>
-      <div>
+      <video autoplay muted loop>
+        <source src="videos/clouds.mp4" type="video/mp4" />
+      </video>
+      <div class="currentCity">
         <h1>Paris</h1>
-        <p>
-          Tuesday 14:49, scattered clouds
+        <span class="currentIcon">🌤️ </span>
+        <span class="currentTemp">12°C</span>
+      </div>
+      <div class="currentCityDetails">
+        <p class="tempDetails">
+          <strong> Tuesday 14:49 </strong>
           <br />
-          Humidity: 66%, Wind: 3.13km/h
+          <i> scattered clouds </i>
+        </p>
+        <p>
+          <span class="material-symbols-outlined"> Humidity_Mid </span>
+          Humidity: <strong>66%</strong>
+          <br />
+          <span class="material-symbols-outlined"> Air </span>
+          Wind: <strong>3.13km/h</strong>
         </p>
       </div>
-      <div>🌤️ 12°C</div>
     </main>
 
     <footer>
