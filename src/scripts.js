@@ -12,7 +12,6 @@ function changeTheme() {
   let searchButton = document.querySelector("#search-form-button");
   let bodyBackground = document.querySelector("video");
 
-  // body.classList.toggle("dark");
   if (body.classList.contains("dark")) {
     body.classList.remove("dark");
     headerElement.classList.remove("dark");
@@ -28,6 +27,28 @@ function changeTheme() {
     searchButton.classList.add("dark");
     bodyBackground.src = "videos/darkClouds.mp4";
   }
+}
+
+function refreshWeather(response) {
+  let temperatureElement = document.querySelector("#currentTemp");
+  let temperature = response.data.temperature.current;
+  let cityElement = document.querySelector("#city");
+
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(temperature);
+}
+
+function searchCity(city) {
+  let apiKey = "3af5d1040392d37b9oa8ta7a106b03d4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(refreshWeather);
+}
+
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+
+  searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
