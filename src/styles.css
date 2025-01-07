@@ -113,9 +113,16 @@ video {
   font-weight: bolder;
 }
 
+.weather-app-icon {
+  width: 100px;
+  height: 100px;
+}
+
 .currentTemp {
   font-size: 80px;
   font-weight: bolder;
+  width: 100px;
+  height: 100px;
 }
 
 .currentCityDetails {
@@ -151,7 +158,7 @@ video {
 }
 
 #search-form-button {
-  background-color: #f0eef300;
+  background-color: #f0eef3;
   border: none;
   font-size: 20px;
   color: black;

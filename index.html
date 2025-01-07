@@ -44,22 +44,22 @@
         type="video/mp4"
       ></video>
       <div class="currentCity">
-        <h1 id="city">Paris</h1>
-        <span class="currentIcon">🌤️ </span>
-        <span class="currentTemp" id="currentTemp">12°C</span>
+        <h1 id="city"></h1>
+        <span class="currentIcon" id="icon"> </span>
+        <span class="currentTemp" id="currentTemp"></span>
       </div>
       <div class="currentCityDetails">
         <p class="tempDetails">
-          <strong> Tuesday 14:49 </strong>
+          <strong> <span id="time"></span></strong>
           <br />
-          <i> scattered clouds </i>
+          <i> <span id="description"></span></i>
         </p>
         <p>
           <span class="material-symbols-outlined"> Humidity_Mid </span>
-          Humidity: <strong>66%</strong>
+          Humidity: <strong><span id="humidity"></span>%</strong>
           <br />
           <span class="material-symbols-outlined"> Air </span>
-          Wind: <strong>3.13km/h</strong>
+          Wind: <strong><span id="wind-speed"></span>km/h</strong>
         </p>
       </div>
     </main>
