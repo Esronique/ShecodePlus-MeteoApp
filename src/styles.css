@@ -1,6 +1,16 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  z-index: -100;
+}
 header {
   border-bottom: 3px solid black;
   display: flex;
@@ -24,43 +34,18 @@ form {
   gap: 0px;
 }
 
-footer {
-  border-top: 3px solid black;
-  text-align: center;
-  color: black;
-  width: 100%;
+input[type="text"]:focus {
+  background-color: #f0eef3;
 }
 
-.dark footer {
-  border-top: 3px solid whitesmoke;
-  text-align: center;
-  color: whitesmoke;
-  width: 100%;
+input[type="text"]:autofill {
+  background-color: #f0eef3;
 }
 
-h1 {
-  font-size: 100px;
-  font-weight: bolder;
-  margin: 0px 20px;
-  text-align: center;
-}
-main {
-  display: flex;
-  align-content: start;
-  margin: 50px 50px;
-  background-color: #f0eef396;
-  border-radius: 6px;
-}
-
-.dark main {
-  display: flex;
-  align-content: start;
-  margin: 50px 50px;
+.dark input[type="text"]:focus {
   background-color: #f0eef354;
-  border-radius: 6px;
-  color: whitesmoke;
+  border: 3px solid yellowgreen;
 }
-
 button {
   background: #5d11cf00;
   font-size: 20px;
@@ -79,17 +64,6 @@ button:hover {
   background-color: #f0eef3;
 }
 
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
-  z-index: -100;
-}
-
 .dark button {
   background: #f0eef354;
   font-size: 20px;
@@ -103,7 +77,52 @@ video {
   border-radius: 6px;
   transition: all 200ms ease;
 }
+h1 {
+  font-size: 100px;
+  font-weight: bolder;
+  margin: 0px 20px;
+  text-align: center;
+}
+main {
+  display: flex;
+  align-content: start;
+  margin: 50px 50px;
+  background-color: #f0eef3d2;
+  border-radius: 6px;
+}
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.575);
+  padding-left: 20px;
+  margin-right: 20px;
+}
+
+.dark main {
+  display: flex;
+  align-content: start;
+  margin: 50px 50px;
+  background-color: #f0eef354;
+  border-radius: 6px;
+  color: whitesmoke;
+}
+
+footer {
+  border-top: 3px solid black;
+  text-align: center;
+  color: black;
+  width: 100%;
+}
+
+.dark footer {
+  border-top: 3px solid whitesmoke;
+  text-align: center;
+  color: whitesmoke;
+  width: 100%;
+}
 .currentCity {
   margin: 40px 40px;
   width: 30%;
@@ -177,4 +196,59 @@ video {
   right: 80px;
   top: 12px;
   height: 40px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-forecast-day {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 20px 20px;
+  font-weight: bold;
+}
+
+.dark .weather-forecast-date {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 20px 10px;
+  font-weight: bold;
+}
+
+.weather-forecast-icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  padding: 0px 50px;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dark .weather-forecast-temperatures {
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 50px;
 }
