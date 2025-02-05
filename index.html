@@ -18,6 +18,9 @@
   </head>
   <body>
     <header>
+      <div class="logo">
+        <a href="/"><img src="./images/logo2.png" alt="WeatherCloud" /></a>
+      </div>
       <form class="search-form" id="search-form">
         <input
           type="search"
@@ -33,43 +36,37 @@
           class="material-symbols-outlined"
         />
       </form>
-      <button class="material-symbols-outlined" id="themeButton">
-        Radio_Button_Partial
-      </button>
     </header>
     <main>
-      <video
-        autoplay
-        muted
-        loop
-        src="videos/clouds.mp4"
-        type="video/mp4"
-      ></video>
-      <div class="currentCity">
-        <h1 id="city"></h1>
-        <span class="currentIcon" id="icon"> </span>
-        <span class="currentTemp" id="currentTemp"></span>
-      </div>
-      <div class="currentCityDetails">
-        <p class="tempDetails">
-          <strong> <span id="time"></span></strong>
-          <br />
-          <i> <span id="description"></span></i>
-        </p>
-        <p>
-          <span class="material-symbols-outlined"> Humidity_Mid </span>
-          Humidity: <strong><span id="humidity"></span>%</strong>
-          <br />
-          <span class="material-symbols-outlined"> Air </span>
-          Wind: <strong><span id="wind-speed"></span>km/h</strong>
-        </p>
+      <div class="weather-current">
+        <div class="currentCity">
+          <h1 id="city"></h1>
+          <div class="currentIconAndTemp">
+            <span class="currentIcon" id="icon"> </span>
+            <span class="currentTemp" id="currentTemp"></span>
+          </div>
+        </div>
+        <div class="currentCityDetails">
+          <p class="tempDetails">
+            <span id="time"></span>
+            <br />
+            <i> <span id="description"></span></i>
+          </p>
+          <p>
+            <span class="material-symbols-outlined"> Humidity_Mid </span>
+            Humidity: <strong><span id="humidity"></span>%</strong>
+            <br />
+            <span class="material-symbols-outlined"> Air </span>
+            Wind: <strong><span id="wind-speed"></span>km/h</strong>
+          </p>
+        </div>
       </div>
       <div class="weather-forecast" id="forecast"></div>
     </main>
 
     <footer>
       <p>
-        This project was coded by
+        This project was coded by 🦋
         <a href="https://github.com/Esronique" target="_blank"
           >Esronique Du Plessis</a
         >, is open-sourced on
